@@ -1,0 +1,58 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  basicTimeStep 8
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.5482693575002748 -0.8256362970854577 -0.13313683397636328 0.5662986705104922
+  position -11.247840036906638 10.337567028387172 22.708466234478692
+}
+TexturedBackground {
+}
+RectangleArena {
+  floorSize 10 10
+}
+TexturedBackgroundLight {
+}
+DEF CUBE Transform {
+  translation 0 1.0362439155578613 0
+  rotation 0 0.7071067811865476 0.7071067811865476 3.14159
+  children [
+    Shape {
+      appearance DEF MATERIAL PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        roughness 0.5
+        metalness 0
+      }
+      geometry IndexedFaceSet {
+        coord DEF COORDS_ME_CUBE Coordinate {
+          point [
+            1 1 -1
+            1 -1 -1
+            -1 -1 -1
+            -1 1 -1
+            1 0.999999 1
+            0.999999 -1 1
+            -1 -1 1
+            -1 1 1
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3, -1, 4, 7, 6, 5, -1, 0, 4, 5, 1, -1, 1, 5, 6, 2, -1, 2, 6, 7, 3, -1, 4, 0, 3, 7, -1
+        ]
+      }
+    }
+  ]
+}
+DEF LAMP Transform {
+  translation -4.07625 5.90386 1.00545
+  rotation -0.4980850234832152 -0.762016035926771 -0.4138150195101372 1.51388
+}
+DEF CAMERA Transform {
+  translation -7.48113 5.34367 -6.50764
+  rotation -0.09823262782416198 -0.9687892744072951 -0.22759106446463648 2.34949
+}
+Robot {
+  controller "CubeController"
+  supervisor TRUE
+}
