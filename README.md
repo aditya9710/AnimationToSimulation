@@ -11,6 +11,5 @@ only works for until Blender version 2.79 and not yet for the newer versions. De
 https://github.com/cyberbotics/blender-webots-exporter.git
 
 On loading the '.wbt' file in Webots, the Supervisor property has to be checked to 'True' for a robot node. This allows control of the objects 
-in the world through a Python script. The script then simply translates the defined nodes to the same coordinates as that in the animation 
-frames. Later, physics can be applied to check of the animation is a feasible simulation of real-world behaviour.
-
+in the world through a controller script. The script simply translates the defined nodes to the same coordinates as that in the animation 
+frames. Later, physics can be activated to check if the animation is a feasible simulation of real-world behaviour.
