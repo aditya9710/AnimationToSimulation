@@ -1,4 +1,4 @@
-# AnimationToSimulation
+# Animation To Simulation
 This project contains two scripts on python. One is run on the animation software Blender and the other, on the simulation software Webots.
 
 Animation cannot directly be imported into simulation software usually. The aim of this project is to leeway the Keyframe data from Blender. 
